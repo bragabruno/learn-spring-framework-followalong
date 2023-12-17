@@ -4,9 +4,14 @@ public class AppGamingBasicJava {
 
     public static void main(String[] args) {
 
-        var marioGame = new MarioGame();
-        var superContraGame = new SuperContraGame();
-        var gameRunner = new GameRunner(superContraGame);
+//        var game = new MarioGame();
+        var game = new SuperContraGame(); //1: Object Creation
+
+//        var game = new PacManGame();
+        var gameRunner = new GameRunner(game);
+        //2: Object creation + Wiring of Dependencies
+        // Game is a Dependency of GameRunner
+
         gameRunner.run();
     }
 }
